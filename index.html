@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayfam</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/cafelogo.png" type="image/x-icon">
 </head>
 <body>
 <!-- Başlık -->
 <header>
     <div class="baslik">
         <div class="logo">
+            <a href="#" onclick="showSection('home')">
             <img src="image/cafelogo.png" alt="Logo" class="logo-img">
+            </a>
             <div class="nav-links">
                 <a href="#" onclick="showSection('home')">Anasayfa</a>
                 <a href="#" onclick="showSection('menu')">Menü</a>
@@ -91,24 +94,70 @@
         <h2 class="gallery-title">Galeri</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="image/img1.jpg" alt="Galeri Görsel 1" class="gallery-img">
+                <img src="image/img1.jpg" alt="Galeri Görsel 1" class="gallery-img" onclick="openLightbox(this)">
             </div>
             <div class="gallery-item">
-                <img src="image/img2.jpg" alt="Galeri Görsel 2" class="gallery-img">
+                <img src="image/img2.jpg" alt="Galeri Görsel 2" class="gallery-img" onclick="openLightbox(this)">
             </div>
             <div class="gallery-item">
-                <img src="image/img3.jpg" alt="Galeri Görsel 3" class="gallery-img">
+                <img src="image/img3.jpg" alt="Galeri Görsel 3" class="gallery-img" onclick="openLightbox(this)">
             </div>
             <div class="gallery-item">
-                <img src="image/img4.jpg" alt="Galeri Görsel 4" class="gallery-img">
+                <img src="image/img4.jpg" alt="Galeri Görsel 4" class="gallery-img" onclick="openLightbox(this)">
             </div>
             <div class="gallery-item">
-                <img src="image/img5.jpg" alt="Galeri Görsel 5" class="gallery-img">
+                <img src="image/img5.jpg" alt="Galeri Görsel 5" class="gallery-img" onclick="openLightbox(this)">
             </div>
             <div class="gallery-item">
-                <img src="image/img6.jpg" alt="Galeri Görsel 6" class="gallery-img">
+                <img src="image/img6.jpg" alt="Galeri Görsel 6" class="gallery-img" onclick="openLightbox(this)">
             </div>
         </div>
+    </div>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+<!-- Rezervasyon -->
+    <div id="reservation" class="section" style="display:none; color: black;">
+        <h2 class="reservation-title">Rezervasyon Yap</h2>
+        <form class="reservation-form">
+            <label for="name">İsim-Soyisim:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Tarih:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Saat:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Kişi Sayısı:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="requests">Özel İstekler:</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
+
+            <button class="reservation-button" type="submit">Rezervasyon Yap</button>
+        </form>
+    </div>
+<!-- İletişim -->
+    <div id="contact" class="section" style="display:none; color: black;">
+        <h2 class="contact-title">Bize Ulaşın</h2>
+        <form class="contact-form">
+            <label for="contact-name">İsim-Soyisim:</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+
+            <label for="contact-email">E-posta:</label>
+            <input type="email" id="contact-email" name="email" required>
+
+            <label for="contact-message">Mesajınız:</label>
+            <textarea id="contact-message" name="message" rows="4" required></textarea>
+
+            <button class="contact-button" type="submit">Gönder</button>
+        </form>
     </div>
 <script>
     function showSection(sectionId) {
@@ -124,6 +173,15 @@
     }
     // Başlangıçta sadece anasayfa görünür
     showSection('home');
+    // Galeri Lightbox
+    function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "block";
+  document.getElementById("lightbox-img").src = img.src;
+    }
+    function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+    }
+
 </script>
 </body>
 </html>
