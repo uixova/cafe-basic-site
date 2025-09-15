@@ -1,0 +1,41 @@
+.social-icons a:hover {
+    transform: scale(1.1); /* Hover efekti */
+}
+.nav-links a:hover {
+    color: #d2691e; 
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #d2691e;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    transform: scale(1.05);
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(122, 75, 26, 0.15);
+}
+.close:hover {
+    color: #d2b48c; 
+    transform: scale(1.1);
+}
+.list li::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s
+}
+.list li:hover::before {
+    width: 70px;
+}
+a:hover {
+    color: #f18930;
+}
+.footer-icons i:hover {
+    color: #f18930;
+    transition: color 0.3s ease;
+}
