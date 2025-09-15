@@ -1,8 +1,8 @@
 /* 1024px ve altı */
 @media (max-width: 1024px) {
     .nav-links {
-        top: -50px;
-        left: 10%;
+        top: -95px;
+        left: 8%;
         right: 0;
         margin-left: auto;
         margin-right: auto;
@@ -53,21 +53,19 @@
         max-width: 320px;
         aspect-ratio: 3 / 4;
     }
-    .footer-container {
-        width: 99%;
-        max-width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-        
+    .container {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .footer-content h3 {
+        font-size: 20px;
     }
 }
 /* 856px ve altı */
 @media (max-width: 856px) {
     .nav-links {
-        top: -40px;
-        left: 14%;
+        top: -95px;
+        left: 8%;
         right: 0;
         margin-left: auto;
         margin-right: auto;
@@ -81,35 +79,24 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 13px;
     }
-    .footer-container {
-        width: 840px;
-        max-width: 100%;
+    .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px;
     }
-    .footer-container .social-icons {
-    position: absolute;
-    top: 70%;
-    right: 2%;
-    display: flex;
-    gap: 13px;
-    justify-content: flex-end;
+    .footer-content {
+        width: 100%;
+        margin-bottom: 20px;
     }
-    .footer-container .social-icons a {
-    position: static;
-    display: flex;
-    align-items: center;
-    color: #504f4f;
-    text-decoration: none;
+    .footer-icons {
+        margin-top: 10px;
     }
 }
 
 /* 768px ve altı */
 @media (max-width: 768px) {
     .nav-links {
-        top: -40px;
+        top: -95px;
         left: 12%;
         right: 0;
         margin-left: auto;
@@ -159,12 +146,22 @@
         max-width: 320px;
         aspect-ratio: 3 / 4;
     }
+    .footer-content h3 {
+        font-size: 18px;
+    }
+    .footer-content p,
+    .footer-content a {
+        font-size: 15px;
+    }
+    .footer-icons i {
+        font-size: 22px;
+    }
 }
 
 /* 480px ve altı */
 @media (max-width: 480px) {
     .nav-links {
-        top: -25px;
+        top: -55px;
         left: 0;
         right: 0;
         gap: 6px;
@@ -229,75 +226,28 @@
         margin: 0 auto 20px auto;
         box-sizing: border-box;
     }
+    
 /* 480px ve altı Footer Responsive*/
 @media screen and (max-width: 480px) {
-  .footer-container {
-    width: 100%;
-    min-height: auto;
-    padding: 20px 10px;
-    margin-right: 0;
-    position: relative;
-    box-sizing: border-box;
-  }
-  /* Linkler dikey sıraya geçsin, soldan biraz boşluk */
-  .footer-container .cafe-links-a,
-  .footer-container .cafe-links-b,
-  .footer-container .cafe-links-c,
-  .footer-container .cafe-links-d,
-  .footer-container .cafe-links-e,
-  .footer-container .cafe-links-f {
-    position: relative;
-    top: 0;
-    left: 0;
-    flex-direction: column ;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 16px;
-    text-decoration: none;
-  }
-  .footer-container .sub-email {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 15px;
-  }
-  .footer-container div {
-    position: relative;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .footer-container .cafe-footer-text {
-    position: relative;
-    top: 0;
-    left: 0;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  #telif {
-    position: relative;
-    bottom: 0;
-    left: 27%;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  .footer-container .social-icons {
-    position: relative;
-    top: 0;
-    right: 0;
-    display: flex !important;           /* yan yana dizmek için */
-    justify-content: center; /* ortaya hizala */
-    align-items: center;     /* dikey ortala */
-    gap: 10px;               /* ikonlar arası boşluk */
-    margin-top: 10px;
-}
+    .footer-content {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 15px auto; 
+    }
+    .footer-content p {
+        margin: 15px auto; 
+    }
+    .footer-content p,
+    .footer-content a {
+        font-size: 14px;
+    }
+    .footer-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer-icons i {
+        font-size: 20px;
+    }
 
-.footer-container .social-icons a {
-    font-size: 18px;
-}
 }
 }
